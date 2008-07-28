@@ -1,0 +1,59 @@
+<HTML>
+<HEAD>
+<BASE TARGET="mainpage">
+<style type="text/css">
+
+.hovermenu ul{
+font: bold 13px arial;
+padding-left: 0;
+margin-left: 0;
+height: 20px;
+}
+
+.hovermenu ul li{
+list-style: none;
+display: inline;
+}
+
+.hovermenu ul li a{
+padding: 2px 0.5em;
+text-decoration: none;
+float: left;
+color: black;
+background-color: #FF9933;
+border: 2px solid #FF9933;
+}
+
+.hovermenu ul li a:hover{
+background-color: #FFCC33;
+border-style: outset;
+}
+
+html>body .hovermenu ul li a:active{ /* Apply mousedown effect only to NON IE browsers */
+border-style: inset;
+}
+</style>
+
+</HEAD>
+<BODY>
+Today is: 
+<script type="text/javascript">
+var d = new Date()
+document.write(d.getDate())
+document.write(".")
+document.write(d.getMonth() + 1)
+document.write(".")
+document.write(d.getFullYear())
+</script>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF="startpage.html">Home</A>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF="tools.html">Tools</A>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF="../../../../Templates_and_Forms">Templates</A>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF="learning.html">Learning Center</A>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<A HREF="search.html">Search</A>
+</BODY>
+</HTML>
