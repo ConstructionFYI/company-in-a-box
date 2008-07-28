@@ -1,0 +1,84 @@
+<HTML>
+<HEAD>
+<BASE TARGET="mainpage">
+</HEAD>
+<SCRIPT LANGUAGE="Javascript">
+function MyPage()
+{
+	var hostname = document.forms[0].hostname;
+	var HostType = document.forms[0].thehost;
+	if (hostname.value == "") alert ("Please select hostname below first !");
+	else
+	{
+	if  (HostType.value == 1)
+		{
+		var thelocation = "http://partnerpage.google.com/" + hostname.value;
+		window.parent.mainpage.location=thelocation;
+		}
+	else
+	window.parent.mainpage.location="http://" + hostname.value + "/mypage.shtml";
+	}
+}
+
+function ShowCalendar()
+{
+//http://www.google.com/calendar/hosted/bwebcentral.com/render
+var hostname = document.forms[0].hostname;
+var HostType = document.forms[0].thehost;
+if (hostname.value == "") alert ("Please select hostname below first !");
+else
+	{
+	if  (HostType.value == 1)
+	{
+		var thelocation = "http://www.google.com/calendar/hosted/" + hostname.value + "/render";
+		window.parent.mainpage.location=thelocation;
+
+	}
+	else
+	window.parent.mainpage.location="http://" + hostname.value + "/cal.shtml";
+	}
+}
+
+function ShowMail()
+{
+//http://www.google.com/calendar/hosted/bwebcentral.com/render
+var hostname = document.forms[0].hostname;
+var HostType = document.forms[0].thehost;
+if (hostname.value == "") alert ("Please select hostname below first !");
+else
+	{
+	if  (HostType.value == 1)
+	{
+		var thelocation = "http://mail.google.com/a/" + hostname.value + "/";
+		window.parent.mainpage.location=thelocation;
+
+	}
+	else
+	window.parent.mainpage.location="http://" + hostname.value + "/mail.shtml";
+	}
+}
+
+
+
+</SCRIPT>
+<BODY>
+<p>
+<script src="http://www.gmodules.com/ig/ifr?url=http://braddet.googlepages.com/weathergg.xml&amp;up_City=unknown&amp;up_OldCity=0&amp;up_LoadTime=0&amp;synd=open&amp;w=120&amp;h=170&amp;title=Today's+Weather&amp;border=%23ffffff%7C3px%2C1px+solid+%23999999&amp;output=js"></script>
+</p>
+<P><A onClick="MyPage();" HREF="javascript:void(0);">My Page</A></P>
+<P><A HREF="javascript:void(0);">Roles</A></P>
+<P><A onClick="ShowCalendar();" HREF="javascript:void(0);">Calendar</A></P>
+<P><A onClick="ShowMail();" HREF="javascript:void(0);">Email</A></P>
+<P><A HREF="javascript:void(0);">Contacts</A></P>
+<P><A HREF="javascript:void(0);">Projects</A></P>
+<P><A HREF="javascript:void(0);">Issues</A></P>
+<P><A HREF="javascript:void(0);">Timesheet</A></P>
+<FORM NAME="myform">
+Hostname: <INPUT TYPE="text" NAME="hostname" SIZE=10>
+<SELECT NAME="thehost">
+<OPTION NAME="HostType" Value="1">Google Apps</OPTION>
+<OPTION NAME="HostType" Value="2">Other</OPTION>
+</SELECT>
+</FORM>
+</BODY>
+</HTML>
